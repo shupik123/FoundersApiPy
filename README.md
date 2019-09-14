@@ -10,28 +10,28 @@ A small repo of the Founders API access made into a python package!
 ### Sub Packages:
 
 
-**founders.user:**
+#### founders.user:
 
 `founders.user.info(id)`: returns a user_info class based on user id input (see classes).
 
 `founderse.user.all()`: returns a dictionary of all users in the form of `{username: id, username: id...}`.
 
 
-**founders.server:**
+#### founders.server:
 
 `founders.server.info(id)`: returns a server_info class based on server id input (see classes).
 
 `founders.server.all()`: returns a dictionary of all servers in the form of `{server_name: id, server_name: id...}`.
 
 
-**founders.status:**
+#### founders.status:
 
 `founders.status.stat(id)`: returns a status_info class based on server id input (see classes).
 
 
 ### Classes:
 
-**user_info**:
+#### user_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
 
@@ -45,10 +45,10 @@ A small repo of the Founders API access made into a python package!
 
 `self.created`: time when user account was created in unix epoch time
 
-**server_info**:
+#### server_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
 
-**status_info**:
+#### status_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
