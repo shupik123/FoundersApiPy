@@ -1,21 +1,14 @@
-from urllib import error
-from urllib import request
+import requests
 import json
 
 class user_info:
 	def __init__(self, _id):
 		try:
-			response = request.urlopen('http://api.founders.gg/users/{}'.format(_id)).read()
-			response = str(response)[2:-1]
-			json_data = json.loads(response)
+			r = requests.get('http://api.founders.gg/users/{}'.format(_id))
+			json_data = r.json()[0]
+
 			# example: [{'username': 'Xelada', 'rank': 'Admin', 'servers': '2,4', 'lastSeen': 1568418961, 'created': 0}]
-			json_data = json_data[0]
-
-			try:
-				if json_data['error'] == 'This resource was not found':
-					self.success = False
-
-			except KeyError:
+			if r.status_code == 200:
 				self.success = True
 				self.username = json_data['username']
 				self.rank = json_data['rank']
@@ -23,6 +16,10 @@ class user_info:
 				self.lastSeen = json_data['lastSeen']
 				self.created = json_data['created']
 
+			# example: {"error":"This resource was not found"}
+			else:
+				self.success = False
+				
 		except:
 			self.success = False
 

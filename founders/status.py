@@ -1,22 +1,33 @@
-from urllib import error
-from urllib import request
+import requests
 import json
 
 class status_info:
 	def __init__(self, _id):
 		try:
-			response = request.urlopen('http://api.founders.gg/status/{}'.format(_id)).read()
-			response = str(response)[2:-1]
-			json_data = json.loads(response)
-			# example: [{'username': 'Xelada', 'rank': 'Admin', 'servers': '2,4', 'lastSeen': 1568418961, 'created': 0}]
-			json_data = json_data[0]
+			r = requests.get('http://api.founders.gg/status/{}'.format(_id))
+			json_data = r.json()
 
-			try:
-				if json_data['error'] == 'This resource was not found':
-					self.success = False
+			# example: {"Success":{"host":"108.79.43.45","port":25567}}
+			if r.status_code == 200:
+				json_data = json_data['Success']
 
-			except KeyError:
 				self.success = True
+				self.status = True
+				self.ip = json_data['host']
+				self.port = json_data['port']
+
+			# example: {"error":{"errno":"ECONNREFUSED","code":"ECONNREFUSED","syscall":"connect","address":"108.79.43.45","port":25566}}
+			elif r.status_code == 500:
+				json_data = json_data['error']
+
+				self.success = True
+				self.status = False
+				self.ip = json_data['address']
+				self.port = json_data['port']
+
+			# example: {"error":"This resource was not found"}
+			else:
+				self.success = False
 
 		except:
 			self.success = False
