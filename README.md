@@ -1,37 +1,47 @@
 # FoundersApiPy
-A small repo of the Founders API access made into a python package!
+A small package for the [Founders API](https://github.com/Xeladarocks/founders-api) access made into a python package!
 
+## Index:
+- [Package](https://github.com/shupik123/FoundersApiPy#import)
+- [Sub Packages](https://github.com/shupik123/FoundersApiPy#sub-packages)
+  - [user](https://github.com/shupik123/FoundersApiPy#founders.user)
+  - [server](https://github.com/shupik123/FoundersApiPy#founders.server)
+  - [status](https://github.com/shupik123/FoundersApiPy#founders.status)
+- [Classes](https://github.com/shupik123/FoundersApiPy#Classes)
+  - [user_info](https://github.com/shupik123/FoundersApiPy#user_info)
+  - [server_info](https://github.com/shupik123/FoundersApiPy#server_info)
+  - [status_info](https://github.com/shupik123/FoundersApiPy#status_info)
 
-### Import:
+## Package:
 
 `import founders`
 
 
-### Sub Packages:
+## Sub Packages:
 
 
-#### founders.user:
+### founders.user:
 
 `founders.user.info(id)`: returns a [user_info](https://github.com/shupik123/FoundersApiPy/blob/master/README.md#user_info) class based on user id input.
 
 `founderse.user.all()`: returns a dictionary of all users in the form of `{username: id, username: id...}`.
 
 
-#### founders.server:
+### founders.server:
 
 `founders.server.info(id)`: returns a [server_info](https://github.com/shupik123/FoundersApiPy/blob/master/README.md#server_info) class based on server id input.
 
 `founders.server.all()`: returns a dictionary of all servers in the form of `{server_name: id, server_name: id...}`.
 
 
-#### founders.status:
+### founders.status:
 
 `founders.status.stat(id)`: returns a [status_info](https://github.com/shupik123/FoundersApiPy/blob/master/README.md#status_info) class based on server id input.
 
 
-### Classes:
+## Classes:
 
-#### user_info:
+### user_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
 
@@ -45,10 +55,10 @@ A small repo of the Founders API access made into a python package!
 
 `self.created`: time when user account was created in unix epoch time
 
-#### server_info:
+### server_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
 
-#### status_info:
+### status_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
