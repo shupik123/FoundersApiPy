@@ -22,21 +22,21 @@ A small package for the [Founders API](https://github.com/Xeladarocks/founders-a
 
 ### user:
 
-`founders.user.info(id)`: returns a [user_info](https://github.com/shupik123/FoundersApiPy/blob/master/README.md#user_info) class based on user id input.
+`founders.user.info(id)`: returns a [user_info](https://github.com/shupik123/FoundersApiPy#user_info) class based on user id input.
 
 `founderse.user.all()`: returns a dictionary of all users in the form of `{username: id, username: id...}`.
 
 
 ### server:
 
-`founders.server.info(id)`: returns a [server_info](https://github.com/shupik123/FoundersApiPy/blob/master/README.md#server_info) class based on server id input.
+`founders.server.info(id)`: returns a [server_info](https://github.com/shupik123/FoundersApiPy#server_info) class based on server id input.
 
 `founders.server.all()`: returns a dictionary of all servers in the form of `{server_name: id, server_name: id...}`.
 
 
 ### status:
 
-`founders.status.stat(id)`: returns a [status_info](https://github.com/shupik123/FoundersApiPy/blob/master/README.md#status_info) class based on server id input.
+`founders.status.stat(id)`: returns a [status_info](https://github.com/shupik123/FoundersApiPy#status_info) class based on server id input.
 
 
 ## Classes:
@@ -59,6 +59,26 @@ A small package for the [Founders API](https://github.com/Xeladarocks/founders-a
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
 
+`self.domain`: The domain name of the server; Ex: *hypixel.net*.
+
+`self.ip`: The ip adress of the server, Ex: 172.65.128.70
+
+`self.port`: The port of the server (by default and usually 25565).
+
+`self.name`: The name of the server in the [Founders Server Board](http://m.founders.gg/); Ex: Hypixel
+
+`self.mRam`: Minimum [ram allocated](https://minecraft.gamepedia.com/Tutorials/Setting_up_a_server) to the server.
+
+`self.xRam`: Maximum [ram allocated](https://minecraft.gamepedia.com/Tutorials/Setting_up_a_server) to the server.
+
+`self.serverJar`: Type of Minecraft [server jar](https://mcversions.net/) often pertaining to the Minecraft version, Ex: spigot-1.14.4.
+
 ### status_info:
 
 `self.success`: True/False - whether information was obtained. This should always be checked before using information!
+
+`self.status`: True/False - whether the server is running or not.
+
+`self.ip`: The ip adress of the server, Ex: 172.65.128.70
+
+`self.port`: The port of the server (by default and usually 25565).
