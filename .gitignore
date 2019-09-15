@@ -2,3 +2,14 @@ founders/__pycache__/user.cpython-37.pyc
 founders/__pycache__/status.cpython-37.pyc
 founders/__pycache__/server.cpython-37.pyc
 founders/__pycache__/__init__.cpython-37.pyc
+build/lib/founders/__init__.py
+founders.egg-info/top_level.txt
+founders.egg-info/SOURCES.txt
+founders.egg-info/PKG-INFO
+founders.egg-info/dependency_links.txt
+dist/founders-0.1.0.tar.gz
+dist/founders-0.1.0-py3-none-any.whl
+build/lib/founders/user.py
+build/lib/founders/status.py
+build/lib/founders/server.py
+.vscode/settings.json
