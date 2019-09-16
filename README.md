@@ -14,7 +14,15 @@ A small package for the [Founders API](https://github.com/Xeladarocks/founders-a
 
 ## Package:
 
-`import founders`
+Standard: `pip install founders`
+
+If you encounter any issues try using [**this**](https://stackoverflow.com/questions/23708898/pip-is-not-recognized-as-an-internal-or-external-command) or use one of these commands:
+
+Windows: `python -m pip install founders`
+
+Mac/Linux: `python3 -m pip install founders`
+
+To use in your python script: `import founders`
 
 
 ## Sub Packages:
