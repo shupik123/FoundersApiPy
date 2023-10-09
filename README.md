@@ -1,6 +1,9 @@
 # FoundersApiPy
 A small package for the [Founders API](https://github.com/Xeladarocks/founders-api) access made into a python package!
 
+- **THIS PROJECT IS NO LONGER MAINTAINED**
+- **This was my first experience with creating a python package.**
+
 ## Index:
 - [Package](https://github.com/shupik123/FoundersApiPy#Package)
 - [Sub Packages](https://github.com/shupik123/FoundersApiPy#sub-packages)
